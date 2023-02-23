@@ -19,5 +19,7 @@ Install the required dependencies:
 
 ## Instructions
 [Flask documentation](https://flask.palletsprojects.com/en/2.2.x/)
+<br>
 [PyMongo documentation](https://pymongo.readthedocs.io/en/stable/index.html)
+<br>
 [MongoDB documentation](https://www.mongodb.com/docs/manual/tutorial/getting-started/)
