@@ -1,0 +1,6 @@
+flask
+flask_session
+pymongo
+werkzeug
+jinja2
+passlib
