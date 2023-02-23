@@ -7,6 +7,7 @@
 
 Nyrysk is an website-based inventory management system based on Python and uses MongoDB as data storage.
 The goal is to make a faster and more efficient alternative to other commercial products.
+The presentation is included.
 
 ## Requirements
 Install the required dependencies:
