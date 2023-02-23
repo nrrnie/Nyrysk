@@ -1,0 +1,35 @@
+{%  extends 'auth.html' %}
+
+{% block title %} Register {% endblock %}
+
+{% block form %}
+<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Register</p>
+<form method="POST">
+    <div class="mb-3">
+        <label for="phone-input" class="form-label">Enter phone</label>
+        <input type="tel" class="form-control" id="phone-input" name="phone" placeholder="e.g 71231234567" required>
+        <span class="validity"></span>
+    </div>
+    <div class="mb-3">
+      <label for="name-name" class="form-label">Enter name</label>
+      <input type="text" class="form-control" id="name-name" name="name" placeholder="Enter name" required>
+    </div>
+    <div class="mb-3">
+      <label for="email" class="form-label">Enter email</label>
+      <input type="text" class="form-control" id="email-name" name="email" placeholder="Enter email" required>
+    </div>
+    <div class="mb-3">
+        <label for="password-input" class="form-label">Enter password</label>
+        <input type="password" class="form-control" minlength="8" id="password-input"
+               name="password" placeholder="at least 8 characters" required>
+    </div>
+    <div class="mb-3">
+        <label for="verify-input" class="form-label">Confirm password</label>
+        <input type="password" class="form-control" minlength="8" id="verify-input"
+               name="verify" placeholder="re-enter password" required>
+    </div>
+    <a href="{{ url_for('auth.login') }}"
+       class="d-block text-secondary text-decoration-none mb-3">Already have an account?</a>
+    <button type="submit" class="btn btn-primary">Register</button>
+</form>
+{% endblock %}

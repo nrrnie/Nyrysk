@@ -1,0 +1,55 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Items
+{%  endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+{% endblock %}
+
+{% block body %}
+<div class="margined">
+  <table id="dataTable" class="table table-bordered table-hover table-striped table-sm" cellspacing="0" width="100%">
+    <thead>
+      <tr>
+        <th class="th-sm">
+          Barcode
+        </th>
+        <th class="th">
+          Name
+        </th>
+        <th class="th-sm">
+          Category
+        </th>
+        <th class="th">
+          Units (units / kg)
+        </th>
+        <th>
+          Amount
+        </th>
+        <th class="th">
+          Buying price
+        </th>
+        <th class="th">
+          Selling price
+        </th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      {% for item in items %}
+      <tr>
+        <td colspan="1">{{ item['barcode'] }}</td>
+        <td colspan="1">{{ item['name'] }}</td>
+        <td colspan="1">{{ item['categoryName'] }}</td>
+        <td colspan="1">{{ item['weight'] }}</td>
+        <td colspan="1">{{ item['amount'] }}</td>
+        <td colspan="1">{{ item['buying_price'] }}</td>
+        <td colspan="1">{{ item['selling_price'] }}</td>
+      </tr>
+      {% endfor %}
+      
+      <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+</div>
+{% endblock %}

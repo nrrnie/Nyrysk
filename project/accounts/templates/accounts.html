@@ -1,0 +1,45 @@
+{% extends 'main.html' %}
+
+{% block title %}
+Accounts
+{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='table.css')}}">
+{% endblock %}
+
+{% block body %}
+
+<div class="margined">
+    <table id="dataTable" class="table table-bordered table-hover table-striped table-sm" cellspacing="0" width="100%">
+      <thead>
+        <tr>
+          <th class="th-sm">
+            Name
+          </th>
+          <th class="th">
+            Type
+          </th>
+          <th class="th-sm">
+            Negative balance
+          </th>
+          <th>
+            Amount
+          </th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for acc in accs %}
+        <tr>
+          <td colspan="1">{{ acc['name'] }}</td>
+          <td colspan="1">{{ acc['type'] }}</td>
+          <td colspan="1">{{ acc['is_negative_allowed'] }}</td>
+          <td colspan="1">{{ acc['amount'] }}</td>
+        </tr>
+        {% endfor %}
+        
+        <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+  </div>
+
+{% endblock %}
+

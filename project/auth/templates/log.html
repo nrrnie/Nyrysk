@@ -1,0 +1,21 @@
+{% extends 'auth.html' %}
+
+{% block title %} Login {% endblock %}
+
+{% block form %}
+<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Log in</p>
+<form method="POST">
+    <div class="mb-3">
+        <label for="phone-input" class="form-label">Phone number</label>
+        <input type="text" class="form-control" id="phone-input" name="phone" placeholder="e.g. 71231234567" required>
+    </div>
+    <div class="mb-3">
+        <label for="password-input" class="form-label">Password</label>
+        <input type="password" class="form-control" minlength="8" id="password-input"
+               name="password" required>
+    </div>
+    <a href="{{ url_for('auth.register') }}"
+        class="d-block text-secondary text-decoration-none mb-3">Don't have an account yet?</a>
+    <button type="submit" class="btn btn-primary" style="color-scheme: #5cc5e1;">Login</button>
+</form>
+{% endblock %}

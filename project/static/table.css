@@ -1,0 +1,43 @@
+.margined {
+  margin: 10px 20px 20px;
+}
+.table {
+  font-family: "Fira Sans", sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+.table-responsive {
+  display: block;
+  overflow-x: auto;
+}
+
+.table th {
+  text-align: left;
+  border: 1px solid #808080;
+}
+
+.table td,
+.search-input {
+  font-size: 0.9em;
+  padding: 0.8em 0.9em;
+}
+
+.search-input {
+  border: none;
+  outline: none;
+  font-family: "Fira Sans", sans-serif;
+}
+
+table.dataTable thead .sorting:after,
+table.dataTable thead .sorting:before,
+table.dataTable thead .sorting_asc:after,
+table.dataTable thead .sorting_asc:before,
+table.dataTable thead .sorting_asc_disabled:after,
+table.dataTable thead .sorting_asc_disabled:before,
+table.dataTable thead .sorting_desc:after,
+table.dataTable thead .sorting_desc:before,
+table.dataTable thead .sorting_desc_disabled:after,
+table.dataTable thead .sorting_desc_disabled:before {
+  bottom: .5em;
+}

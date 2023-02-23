@@ -1,0 +1,33 @@
+{% extends 'main.html' %}
+{% block title %}Vendors{% endblock %}
+
+{% block links %}
+<link rel="stylesheet" href="{{ url_for('static', filename='table.css') }}">
+{% endblock %}
+
+{% block body %}
+
+<table id="dataTable" class="display margined table-striped" style="width: 100%;">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Type</th>
+            <th>Contacts</th>
+        </tr>
+    </thead>
+
+    <tbody>
+        {% for vendor in list %}
+            <tr>
+                <td>{{ vendor['id'] }}</td>
+                <td>{{ vendor['name'] }}</td>
+                <td>{{ vendor['type'] }}</td>
+                <td>{{ vendor['contacts'] }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+    <script src="{{ url_for('static', filename='js/table.js') }}"></script>
+</table>
+
+{% endblock %}
